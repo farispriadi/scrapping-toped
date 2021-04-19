@@ -21,4 +21,4 @@ def humanize_to_date(humanize_str):
 	else:
 		result = today
 	
-	return result.strftime("%d-%m-%Y")	
+	return result.strftime("%d-%m-%Y")
