@@ -9,14 +9,13 @@ def humanize_to_date(humanize_str):
 	today = date.today()
 	splited_str = humanize_str.split(" ")
 
-
 	if 'minggu lalu' in humanize_str:
 		result = today + relativedelta(weeks=-1*(int(splited_str[0])))
 	elif 'bulan lalu' in humanize_str:
 		result = today + relativedelta(months=-1*(int(splited_str[0])))
 	elif 'tahun lalu' in humanize_str:
 		result = today + relativedelta(years=-1*(int(splited_str[0])))
-	elif 'hari lalu	' not in humanize_str:
+	elif 'hari lalu' in humanize_str:
 		result = today + relativedelta(days=-1*(int(splited_str[0])))
 	else:
 		result = today
